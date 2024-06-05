@@ -6,6 +6,7 @@ const score=document.querySelector('#score');
 const highScore=document.querySelector('#high-score');
 const highOrLow=document.querySelector('#HorL');
 const number=document.querySelector('#number');
+const correctGuess=document.querySelector("#h11");
 let randomNumber=Math.floor(Math.random()*50)+1;
 
 let userScore=50,maxScore=0;
@@ -26,6 +27,8 @@ function result()
             highOrLow.textContent="Congratulation. Your Guess is Correct!!";
             score.textContent=`Score : ${userScore}`;
             highScore.textContent=`Highest Score : ${maxScore}`;
+            correctGuess.textContent=userGuess;
+            document.querySelector('.main').style.backgroundColor='green';
            setGameOver();
         }
     else if(userGuess>randomNumber)
@@ -54,6 +57,8 @@ again.addEventListener('click',()=>{
     randomNumber=Math.floor(Math.random()*50)+1;
     highOrLow.textContent="Start Guessing...."
     score.textContent=`Score : ${userScore}`;
+    correctGuess.textContent='?';
+    document.querySelector('.main').style.backgroundColor='black';
 
     number.disabled=false;
     check.disabled=false;
