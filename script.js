@@ -24,7 +24,7 @@ function result()
     if(userGuess===randomNumber)
         {
             maxScore=Math.max(maxScore,userScore);
-            highOrLow.textContent="Congratulation. Your Guess is Correct!!";
+            highOrLow.textContent="🎉🎉Congratulation. Your Guess is Correct!!";
             score.textContent=`Score : ${userScore}`;
             highScore.textContent=`Highest Score : ${maxScore}`;
             correctGuess.textContent=userGuess;
@@ -33,11 +33,11 @@ function result()
         }
     else if(userGuess>randomNumber)
         {
-            highOrLow.textContent="Guess too high!!";
+            highOrLow.textContent="🤦‍♂️Guess too high!!";
             userScore--;
         }   
     else{
-            highOrLow.textContent="Guess too Low!!";
+            highOrLow.textContent="🤷‍♂️Guess too Low!!";
             userScore--;
         } 
     number.value='';
@@ -55,10 +55,10 @@ function setGameOver()
 again.addEventListener('click',()=>{
     userScore=50;
     randomNumber=Math.floor(Math.random()*50)+1;
-    highOrLow.textContent="Start Guessing...."
+    highOrLow.textContent="✨ Start Guessing...."
     score.textContent=`Score : ${userScore}`;
     correctGuess.textContent='?';
-    document.querySelector('.main').style.backgroundColor='black';
+    document.querySelector('.main').style.backgroundColor= 'rgb(7, 3, 48)';
 
     number.disabled=false;
     check.disabled=false;

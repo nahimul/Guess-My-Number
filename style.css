@@ -14,7 +14,8 @@
     color:aqua;
     padding:3px;
     width:5rem;
-    background-color: blueviolet;
+    height:2rem;
+    background-color: rgb(156, 65, 241);
     border-radius: 5px;
 }
 .which{
@@ -58,7 +59,8 @@ input{
     gap:1rem;
 }
 .main{
-  border:1px solid black;
+  border:1px solid rgb(7, 3, 48);
+  background-color: rgb(7, 3, 48);
   border-radius:2rem;
   padding:5rem;
   margin:5rem;
